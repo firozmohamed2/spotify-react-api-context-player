@@ -1,0 +1,104 @@
+.container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+.player-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000000;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+   
+  }
+  
+  /* audio player controls */
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* play/pause button */
+  .play-pause {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: #fff;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .play-pause:hover {
+    transform: scale(1.1);
+  }
+  
+  /* audio player progress bar */
+  .progress {
+    margin-top: 20px;
+    height: 10px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  /* audio player progress bar fill */
+  .progress-fill {
+    height: 100%;
+    background-color: #1db954;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s ease;
+  }
+  
+  /* audio player timestamps */
+  .timestamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  
+  /* audio player timestamp current time */
+  .current-time {
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  /* audio player timestamp duration */
+  .duration {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+
+  
