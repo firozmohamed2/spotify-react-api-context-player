@@ -1,0 +1,248 @@
+ *{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    border-radius: 10px;
+  }
+  
+  .progress {
+    background: #21ba45;
+    height: 10px;
+    border-radius: 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+.left{
+    height:100% ;
+    width: 14%;
+    display: inline-block;
+    background-color: #181625;
+    position: fixed;
+    left: 0;
+}
+
+
+.middle{
+    height:100% ;
+    width: 61%;
+    position: absolute;
+    left:14%;
+
+    background-color: #181633;
+    
+}
+
+
+
+
+.end{
+    height:100% ;
+    width: 25%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    background-color: #181633;
+
+    /* background-color: #12176e; */
+}
+
+
+.bottom{
+    height:80px ;
+    width: 100%;
+    position: absolute;
+    bottom: 0px ;
+    left: 0px ;
+
+
+    background: rgba(172, 186, 193, 0.1);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 0px;
+    
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+
+
+/* Define the animation */
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+
+.round-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: rotate 4s linear infinite;
+    margin:10px ;
+    display: inline;
+    
+
+}
+
+
+
+
+.player-info-div{
+    height: 100%;
+    width: 20%;
+    background-color: red;
+}
+
+
+
+
+
+
+
+.center-vertical {
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  .player-info p{
+    display: inline;
+}
+  .song-info{
+    margin-top: 8px;
+    margin-left: 20px;
+    color: white;
+    display: inline-block;
+  }
+
+  .artist-name{
+    font-weight: bold;
+  }
+
+  .album-name{
+    font-weight: lighter;
+    font-size: 14px;
+  }
+
+
+  .center{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+
+
+
+
+
+  /* controls */
+  .player-controls-div{
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+    align-items: center;
+  }
+
+  
+
+
+  .bottom-layer{
+    height: 100%;
+
+  }
+
+
+
+  .song-details-area{
+        width: 20%;
+        height: 100%;
+        display: inline-block;
+        /* background-color: yellow; */
+  }
+
+  .controls-area{
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+    
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.music-player {
+  width: 300px;
+  height: 50px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-pause-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 5px;
+  background-color: #ccc;
+  margin: 0 10px;
+  position: relative;
+}
+
+.progress {
+  width: 0;
+  height: 5px;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

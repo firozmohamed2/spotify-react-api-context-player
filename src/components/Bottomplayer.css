@@ -1,0 +1,93 @@
+.progress {
+    margin-top: 20px;
+    height: 10px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  /* audio player progress bar fill */
+  .progress-fill {
+    height: 100%;
+    background-color: #1db954;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s ease;
+  }
+  
+  /* audio player timestamps */
+  .timestamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  
+  /* audio player timestamp current time */
+  .current-time {
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  /* audio player timestamp duration */
+  .duration {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+
+
+
+
+
+
+
+  /* volume controls */
+
+  .volume-progress {
+    margin-top: 20px;
+    height: 10px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  /* audio player progress bar fill */
+  .volume-progress-fill {
+    height: 100%;
+    background-color: #1db954;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s ease;
+  }
+
+
+
+  .volume-area{
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
