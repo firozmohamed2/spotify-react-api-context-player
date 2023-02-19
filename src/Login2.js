@@ -1,9 +1,8 @@
 import React from 'react'
 import {useEffect, useState} from "react";
-import axios from 'axios';
-import SpotifyGetPlaylists from './SpotifyGetPlaylists';
-import Home from './Home';
 import LoginPage from './LoginPage';
+import IndexScreen from './IndexScreen';
+
 
 
 
@@ -71,10 +70,9 @@ const logout = () => {
   return (
     <div>
 
-
 {!token ?
                     <LoginPage />
-                    : <Home />  }
+                    : <IndexScreen />  }
 
 
 

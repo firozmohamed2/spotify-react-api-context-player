@@ -1,17 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import  { useState, useRef, useEffect } from 'react';
+import  { useState, useRef, useEffect,useContext } from 'react';
 import './Player.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPause } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { AudioPlayerContext } from './AudioPlayerContext';
+
 
 
 function Player() {
+    const { setAudioUrl } = useContext(AudioPlayerContext);
+    const handleAudioUrlChange = (event) => {
+        setAudioUrl('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3');
+      };
   return (
     <div>
               <Link to="/">Go to Home</Link>
+              <button onClick={handleAudioUrlChange}>change audio to sound helix 11</button>
+
 
     </div>
   )
@@ -26,7 +34,7 @@ export default Player;
 
 
 function AudioPlayer() {
-  const [audioUrl, setAudioUrl] = useState('https://p.scdn.co/mp3-preview/3fed7b4b84345ee247215fcdc52eeb32c3977f29?cid=423cd656ff7d45fc98996a8e82da9d37');
+    const {audioUrl, setAudioUrl} = useContext(AudioPlayerContext);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -45,6 +53,8 @@ function AudioPlayer() {
   const handleInputChange = (event) => {
     setAudioUrl(event.target.value);
   };
+
+
 
   useEffect(() => {
     audioRef.current.addEventListener('timeupdate', () => {
@@ -72,6 +82,17 @@ function AudioPlayer() {
 
     };
   }, []);
+
+
+  useEffect(() => {
+    //audioRef.current.pause();
+    audioRef.current.play(function (e){
+        console.log("error",e.message)
+    } );
+    setIsPlaying(true);
+    //console.log("Audio");
+
+  },[audioUrl]);
 
   const handleProgressClick = (event) => {
     const rect = event.target.getBoundingClientRect();
